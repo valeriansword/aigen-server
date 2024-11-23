@@ -12,7 +12,7 @@ const app=express();
 
 dotenv.config();
 app.use(cors({
-    origin:"https://aigen-client.onrender.com"
+    origin:["https://aigen-client.onrender.com","http://localhost:5173"]
 }));
 app.use(bodyParser.json({limit:"50mb"}));
 app.use(express.json({limit:"50mb"}));
