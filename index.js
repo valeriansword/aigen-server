@@ -11,7 +11,9 @@ import dalleRoutes from './routes/dalleRoutes.js';
 const app=express();
 
 dotenv.config();
-app.use(cors());
+app.use(cors({
+    origin:"https://aigen-client.onrender.com"
+}));
 app.use(bodyParser.json({limit:"50mb"}));
 app.use(express.json({limit:"50mb"}));
 
